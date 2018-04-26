@@ -123,3 +123,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+# 可以看到 {% static %} 标签的作用实际就是把后面的字符串加了一个 /static/ 前缀，比如 {% static 'blog/css/pace.css' %}
+# 最终渲染的值是 /static/blog/css/pace.css。而 /static/ 前缀是我们在 settings.py 文件中通过 STATIC_URL = '/static/' 指定的
